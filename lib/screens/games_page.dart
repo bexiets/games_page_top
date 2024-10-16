@@ -12,8 +12,11 @@ class GamesListPage extends HookConsumerWidget {
     final gamesProviderState = ref.watch(gamesProviderProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Games'),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(154.0), 
+        child: AppBar(
+          title: const Text('Games'),
+        ),
       ),
       body: gamesProviderState.when(
         data: (games) {
