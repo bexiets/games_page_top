@@ -31,7 +31,7 @@ class ButtonAll extends HookConsumerWidget{
                 WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
-                        side: BorderSide(color: isActiveAll.value ? Colors.black : Colors.grey,)))),
+                        side: BorderSide(color: isActiveAll.value ? Colors.black : Colors.black26,)))),
         child: Center(
           child: Text('Все',
               style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400), ),

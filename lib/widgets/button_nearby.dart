@@ -27,7 +27,7 @@ class ButtonNearby extends StatelessWidget {
                 WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
-                        side: BorderSide(color: isActiveNearby.value ? Colors.black : Colors.grey,)))),
+                        side: BorderSide(color: isActiveNearby.value ? Colors.black : Colors.black26,)))),
         child: Center(
           child: Text('Рядом',
               style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400), ),

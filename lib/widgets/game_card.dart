@@ -155,7 +155,7 @@ class GameCard extends StatelessWidget {
                                         ),
                                         Flexible(
                                           child: Text(
-                                            '${result.organizer.name!} ddsadas',
+                                            'Организатор',
                                             style: TextStyle(
                                                 fontSize: 12,
                                                 color: Colors.white,
