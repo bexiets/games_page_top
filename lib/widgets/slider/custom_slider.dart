@@ -12,7 +12,7 @@ class CustomSlider extends StatelessWidget {
     required this.min,
     required this.max,
     required this.initialValue,
-    this.sliderWidth = 285.0,
+    this.sliderWidth = 270.0,
     this.sliderHeight = 2.0, 
   }) : super(key: key);
 

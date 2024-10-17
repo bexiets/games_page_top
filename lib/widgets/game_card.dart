@@ -27,6 +27,7 @@ class GameCard extends StatelessWidget {
           children: [
             Container(
               height: 210,
+             
               margin: const EdgeInsets.symmetric(vertical: 10.0),
               decoration: BoxDecoration(
                 
@@ -50,11 +51,12 @@ class GameCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Container(
                         margin: const EdgeInsets.only(top: 20),
-                        width: 190,
+                        width: 200,
                         height: 46,
                         child: ClipRect(
                           child: BackdropFilter(
@@ -93,12 +95,14 @@ class GameCard extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                          padding: const EdgeInsets.fromLTRB(153, 11, 0, 0),
+                          padding: const EdgeInsets.only(right: 15),
                           child: IconButton(
                               onPressed: () {},
-                              icon: Icon(
-                                Icons.share_outlined,
+                              icon: Image.asset(
+                                'assets/images/card_background/share.png',
                                 color: Colors.white,
+                                width: 24,
+                                height: 24,
                               ))),
                     ],
                   ),
@@ -204,6 +208,7 @@ class GameCard extends StatelessWidget {
                     height: 46,
                     // color: Colors.blue,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
                           padding: const EdgeInsets.fromLTRB(22, 0, 0, 10),
@@ -215,7 +220,7 @@ class GameCard extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 26.0),
+                          padding: const EdgeInsets.only(right: 15),
                           child: Container(
                             width: 26,
                             height: 48,

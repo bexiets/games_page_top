@@ -5,10 +5,10 @@ class MyCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.blue // Background color
+      ..color = Colors.blue 
       ..style = PaintingStyle.fill;
 
-    // Create a path for the custom shape
+ 
     final path = Path()
       ..moveTo(0, size.height) // Start at the bottom left
       ..lineTo(0, 0) // Go to the top left
@@ -25,6 +25,6 @@ class MyCustomPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    return false; // No need to repaint
+    return false; 
   }
 }

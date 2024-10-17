@@ -17,7 +17,7 @@ class GamesListPage extends HookConsumerWidget {
     final gamesProviderState = ref.watch(gamesProviderProvider);
     final isActiveAll = useState(true);
      final isActiveNearby = useState(false);
-     final activeButtonProvider = StateProvider<int>((ref) => 0);
+
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(154.0),
