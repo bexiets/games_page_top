@@ -6,10 +6,12 @@ class ButtonAll extends HookConsumerWidget{
     super.key,
     required this.isActiveAll,
     required this.isActiveNearby,
+    required this.onPressed,
   });
 
   final ValueNotifier<bool> isActiveAll;
   final ValueNotifier<bool> isActiveNearby;
+  final VoidCallback onPressed; 
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -20,7 +22,7 @@ class ButtonAll extends HookConsumerWidget{
       child: TextButton(
         
         onPressed: () {
-        //  isActiveNearby.value = !isActiveNearby.value ;
+     
         isActiveAll.value = true;
         isActiveNearby.value = false;
          

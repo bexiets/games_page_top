@@ -34,6 +34,7 @@ _$ResultsImpl _$$ResultsImplFromJson(Map<String, dynamic> json) =>
       duration: Duration.fromJson(json['duration'] as Map<String, dynamic>),
       existingPlayerCount: (json['existing_player_count'] as num?)?.toInt(),
       organizer: Organizer.fromJson(json['organizer'] as Map<String, dynamic>),
+      distanceFromUser: (json['distance_from_user'] ?? 0.0) as double,
     );
 
 Map<String, dynamic> _$$ResultsImplToJson(_$ResultsImpl instance) =>
@@ -47,6 +48,7 @@ Map<String, dynamic> _$$ResultsImplToJson(_$ResultsImpl instance) =>
       'duration': instance.duration,
       'existingPlayerCount': instance.existingPlayerCount,
       'organizer': instance.organizer,
+      'distanceFromUser': instance.distanceFromUser,
     };
 
 _$DurationImpl _$$DurationImplFromJson(Map<String, dynamic> json) =>
@@ -68,7 +70,7 @@ _$OrganizerImpl _$$OrganizerImplFromJson(Map<String, dynamic> json) =>
       surname: json['surname'] as String?,
       photo: json['photo'] as String?,
       username: json['username'] as String?,
-      phoneNumber: json['phoneNumber'] as String?,
+      phoneNumber: json['phone_number'] as String?,
     );
 
 Map<String, dynamic> _$$OrganizerImplToJson(_$OrganizerImpl instance) =>

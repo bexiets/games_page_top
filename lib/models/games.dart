@@ -28,6 +28,7 @@ class Results with _$Results {
     required Duration duration,
     required int? existingPlayerCount,
     required Organizer organizer,
+    required double? distanceFromUser,
   }) = _Results;
 
   factory Results.fromJson(Map<String, dynamic> json) => _$ResultsFromJson(json);

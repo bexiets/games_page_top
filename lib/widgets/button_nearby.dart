@@ -5,10 +5,12 @@ class ButtonNearby extends StatelessWidget {
     super.key,
     required this.isActiveNearby,
     required this.isActiveAll,
+    required this.onPressed,
   });
 
   final ValueNotifier<bool> isActiveNearby;
   final ValueNotifier<bool> isActiveAll;
+  final VoidCallback onPressed; 
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +18,12 @@ class ButtonNearby extends StatelessWidget {
       height: 24,
       width: 64,
       child: TextButton(
-        onPressed: () {
-           isActiveNearby.value = true;
-          isActiveAll.value = false;
+        onPressed: onPressed,
+        // () {
+        //    isActiveNearby.value = true;
+        //   isActiveAll.value = false;
          
-        },
+        // },
         style: ButtonStyle(
           padding: WidgetStateProperty.all<EdgeInsets>(EdgeInsets.zero),
             shape:

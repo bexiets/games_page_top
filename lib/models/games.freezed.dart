@@ -240,6 +240,7 @@ mixin _$Results {
   Duration get duration => throw _privateConstructorUsedError;
   int? get existingPlayerCount => throw _privateConstructorUsedError;
   Organizer get organizer => throw _privateConstructorUsedError;
+  double? get distanceFromUser => throw _privateConstructorUsedError;
 
   /// Serializes this Results to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -264,7 +265,8 @@ abstract class $ResultsCopyWith<$Res> {
       String? startDate,
       Duration duration,
       int? existingPlayerCount,
-      Organizer organizer});
+      Organizer organizer,
+      double? distanceFromUser});
 
   $DurationCopyWith<$Res> get duration;
   $OrganizerCopyWith<$Res> get organizer;
@@ -294,6 +296,7 @@ class _$ResultsCopyWithImpl<$Res, $Val extends Results>
     Object? duration = null,
     Object? existingPlayerCount = freezed,
     Object? organizer = null,
+    Object? distanceFromUser = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -332,6 +335,10 @@ class _$ResultsCopyWithImpl<$Res, $Val extends Results>
           ? _value.organizer
           : organizer // ignore: cast_nullable_to_non_nullable
               as Organizer,
+      distanceFromUser: freezed == distanceFromUser
+          ? _value.distanceFromUser
+          : distanceFromUser // ignore: cast_nullable_to_non_nullable
+              as double?,
     ) as $Val);
   }
 
@@ -372,7 +379,8 @@ abstract class _$$ResultsImplCopyWith<$Res> implements $ResultsCopyWith<$Res> {
       String? startDate,
       Duration duration,
       int? existingPlayerCount,
-      Organizer organizer});
+      Organizer organizer,
+      double? distanceFromUser});
 
   @override
   $DurationCopyWith<$Res> get duration;
@@ -402,6 +410,7 @@ class __$$ResultsImplCopyWithImpl<$Res>
     Object? duration = null,
     Object? existingPlayerCount = freezed,
     Object? organizer = null,
+    Object? distanceFromUser = freezed,
   }) {
     return _then(_$ResultsImpl(
       id: freezed == id
@@ -440,6 +449,10 @@ class __$$ResultsImplCopyWithImpl<$Res>
           ? _value.organizer
           : organizer // ignore: cast_nullable_to_non_nullable
               as Organizer,
+      distanceFromUser: freezed == distanceFromUser
+          ? _value.distanceFromUser
+          : distanceFromUser // ignore: cast_nullable_to_non_nullable
+              as double?,
     ));
   }
 }
@@ -456,7 +469,8 @@ class _$ResultsImpl implements _Results {
       required this.startDate,
       required this.duration,
       required this.existingPlayerCount,
-      required this.organizer});
+      required this.organizer,
+      required this.distanceFromUser});
 
   factory _$ResultsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResultsImplFromJson(json);
@@ -479,10 +493,12 @@ class _$ResultsImpl implements _Results {
   final int? existingPlayerCount;
   @override
   final Organizer organizer;
+  @override
+  final double? distanceFromUser;
 
   @override
   String toString() {
-    return 'Results(id: $id, contribution: $contribution, maxPlayer: $maxPlayer, image: $image, title: $title, startDate: $startDate, duration: $duration, existingPlayerCount: $existingPlayerCount, organizer: $organizer)';
+    return 'Results(id: $id, contribution: $contribution, maxPlayer: $maxPlayer, image: $image, title: $title, startDate: $startDate, duration: $duration, existingPlayerCount: $existingPlayerCount, organizer: $organizer, distanceFromUser: $distanceFromUser)';
   }
 
   @override
@@ -504,13 +520,25 @@ class _$ResultsImpl implements _Results {
             (identical(other.existingPlayerCount, existingPlayerCount) ||
                 other.existingPlayerCount == existingPlayerCount) &&
             (identical(other.organizer, organizer) ||
-                other.organizer == organizer));
+                other.organizer == organizer) &&
+            (identical(other.distanceFromUser, distanceFromUser) ||
+                other.distanceFromUser == distanceFromUser));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, contribution, maxPlayer,
-      image, title, startDate, duration, existingPlayerCount, organizer);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      contribution,
+      maxPlayer,
+      image,
+      title,
+      startDate,
+      duration,
+      existingPlayerCount,
+      organizer,
+      distanceFromUser);
 
   /// Create a copy of Results
   /// with the given fields replaced by the non-null parameter values.
@@ -538,7 +566,8 @@ abstract class _Results implements Results {
       required final String? startDate,
       required final Duration duration,
       required final int? existingPlayerCount,
-      required final Organizer organizer}) = _$ResultsImpl;
+      required final Organizer organizer,
+      required final double? distanceFromUser}) = _$ResultsImpl;
 
   factory _Results.fromJson(Map<String, dynamic> json) = _$ResultsImpl.fromJson;
 
@@ -560,6 +589,8 @@ abstract class _Results implements Results {
   int? get existingPlayerCount;
   @override
   Organizer get organizer;
+  @override
+  double? get distanceFromUser;
 
   /// Create a copy of Results
   /// with the given fields replaced by the non-null parameter values.

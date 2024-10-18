@@ -1,21 +1,21 @@
 import 'package:dio/dio.dart';
 import '../models/games.dart'; 
 
-class ApiService {
+class GamesRepository {
   final Dio _dio;
 
-  ApiService(this._dio);
+  GamesRepository(this._dio);
 
-  Future<List<Games>> fetchCities(String? searchQuery) async {
+  Future<Games> fetchAllGames(String? searchQuery, int page) async {
     final url = searchQuery != null 
-        ? 'https://odigital.pro/locations/cities/?search=$searchQuery' 
-        : 'https://odigital.pro/locations/cities/';
+        ? 'https://odigital.pro/football_fields_api/games/?search=$searchQuery' 
+        : 'https://odigital.pro/football_fields_api/games/';
     
     try {
       final response = await _dio.get(url);
      
-      List<dynamic> data = response.data;
-      return data.map((json) => Games.fromJson(json)).toList();
+    
+      return Games.fromJson(response.data);
     } catch (e) {
       throw Exception('Failed to load cities: $e');
     }
